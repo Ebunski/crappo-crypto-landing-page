@@ -1,0 +1,25 @@
+@use "../utils/" as *;
+.error-svg {
+  fill: red;
+  font-size: $font-big;
+}
+.cart-svg {
+  fill: var(--secondary-color);
+  font-size: $font-big;
+}
+
+.error {
+  height: calc(100vh - $spacing-3xl);
+  background: url("../../images/error.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  background-size: cover;
+  position: relative;
+
+  &__attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 50;
+    color: var(--sub-text-color);
+  }
+}

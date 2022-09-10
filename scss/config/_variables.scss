@@ -1,0 +1,47 @@
+@use "./functions";
+@use "sass:math" as math;
+
+//function::
+@function px-to-rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error "Don't add units to the rem() function, only number";
+  }
+}
+
+//font-size
+$font-base: 1rem !default;
+$font-md: px-to-rem(20);
+$font-lg: 2rem !default;
+$font-big: 5rem !default;
+$header-font: clamp(px-to-rem(32), px-to-rem(16) + 2vw, px-to-rem(48));
+
+//font-weight
+$font-normal: 400 !default;
+$font-heavy: 700 !default;
+
+//spacing
+$spacing-xs: px-to-rem(5) !default;
+$spacing-sm: px-to-rem(10);
+$spacing-md: 1rem !default;
+$spacing-lg: px-to-rem(20);
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+
+//transition
+$transition: all 0.5s ease-in-out !default;
+$bezier: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+//width
+$max-width: 1170px;
+$card-width: px-to-rem(250);
+//variables file
+
+//border
+$radius-sm: px-to-rem(5);
+$radius-md: px-to-rem(10);
+$radius-round: 50%;
+
+//screens (em unit is better than rem for screens)
+//similar to object in js

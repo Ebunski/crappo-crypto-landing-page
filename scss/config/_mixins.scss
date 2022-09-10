@@ -1,0 +1,103 @@
+@use "./variables" as *;
+@use "./functions" as *;
+@use "./colors" as *;
+@use "sass:map";
+
+//param:default value
+@mixin flex($direction, $justify: false) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @if ($justify != false) {
+    justify-content: $justify;
+  }
+}
+
+@mixin grid($cols, $gap, $responsive: false) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: auto;
+  gap: px-to-rem($gap);
+  overflow: hidden;
+  justify-items: center;
+  @if ($responsive == true) {
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat($cols + 1, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat($cols + 2, 1fr);
+    }
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: repeat($cols + 3, 1fr);
+      gap: px-to-rem($gap + 10);
+    }
+  }
+}
+
+@mixin grid-unequal($cols, $space, $gap, $responsive: false) {
+  position: relative;
+  display: grid;
+  grid-template-columns: $space;
+  grid-template-rows: auto;
+  gap: px-to-rem($gap);
+  overflow: hidden;
+  justify-items: center;
+  @if ($responsive == true) {
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat($cols + 1, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat($cols + 2, 1fr);
+    }
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: repeat($cols + 3, 1fr);
+      gap: px-to-rem($gap + 10);
+    }
+  }
+}
+
+@mixin top-right($top, $right) {
+  position: absolute;
+  top: px-to-rem($top);
+  right: px-to-rem($right);
+}
+@mixin bottom-center($bottom) {
+  position: absolute;
+  bottom: px-to-rem($bottom);
+  width: 100%;
+}
+@mixin absolute-position-all($val) {
+  position: absolute;
+  top: $val;
+  left: $val;
+  bottom: $val;
+  right: $val;
+}
+
+$breakpoints-up: (
+  "medium": px-to-em(700),
+  "large": px-to-em(900),
+  "xlarge": px-to-em(1440),
+) !default;
+$breakpoints-down: (
+  "small": px-to-em(699.98),
+  "medium": px-to-em(899.98),
+  "large": px-to-em(1439.98),
+) !default;
+
+@mixin breakpoint-up($size) {
+  @media only screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media only screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
