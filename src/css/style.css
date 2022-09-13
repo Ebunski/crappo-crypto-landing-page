@@ -310,4 +310,41 @@ nav button {
   padding: 0.875rem 2rem;
   border-radius: 1rem;
   background: #3671e9;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 8px;
+  padding: 0 5rem;
+}
+.hero .words {
+  flex: 1;
+}
+.hero .words .info {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 0.5rem;
+}
+.hero .words .info .white {
+  background: white;
+  border-radius: 2rem;
+  color: black;
+  padding: 4px 16px;
+}
+.hero .words .info .div {
+  color: white;
+}
+.hero .words h1 {
+  font-weight: 700;
+}
+.hero .words p {
+  max-width: 80%;
 }/*# sourceMappingURL=style.css.map */
