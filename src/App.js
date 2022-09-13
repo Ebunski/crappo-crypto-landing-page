@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./components/Header"
-import Main from "./components/Main"
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 
 export default function App(){
     return(
     <>
-        <Header />
-        <Main />
+        <Navbar />
+        <Hero />
 
 
         

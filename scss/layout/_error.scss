@@ -1,4 +1,4 @@
-@use "../utils/" as *;
+@use "../config/" as *;
 .error-svg {
   fill: red;
   font-size: $font-big;
@@ -10,7 +10,7 @@
 
 .error {
   height: calc(100vh - $spacing-3xl);
-  background: url("../../images/error.jpg");
+  // background: url("../../images/error.jpg");
   background-repeat: no-repeat;
   background-position: center 0px;
   background-size: cover;
