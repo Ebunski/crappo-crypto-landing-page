@@ -85,12 +85,12 @@ h4 {
 h1 {
   font-size: 3rem;
 }
-@media only screen and (min-width: 43.75em) {
+@media only screen and (min-width: 48.0625em) {
   h1 {
     font-size: 3.375rem;
   }
 }
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 64em) {
   h1 {
     font-size: 3.75rem;
   }
@@ -132,26 +132,30 @@ section {
   margin-inline: auto;
   padding-top: 2rem;
   color: var(--on-background);
-  padding-inline: 1rem;
   transition: all 0.5s ease-in-out;
-}
-@media only screen and (min-width: 43.75em) {
-  section {
-    padding-inline: 2rem;
-  }
 }
 
 button {
   position: relative;
   padding: 0.625rem;
-  background: transparent;
+  background: #3671e9;
   color: var(--on-background);
   text-transform: capitalize;
-  border: 3px solid var(--primary-color);
+  border: transparent;
   border-radius: 0.3125rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   z-index: 1;
+}
+
+.page-container {
+  width: 90vw;
+  margin-inline: auto;
+}
+@media only screen and (min-width: 48.0625em) {
+  .page-container {
+    width: 85vw;
+  }
 }
 
 .styled-button::before {
@@ -196,7 +200,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   overflow: hidden;
   justify-content: center;
   min-height: 100vh;
@@ -282,6 +285,12 @@ button {
   color: var(--sub-text-color);
 }
 
+.button {
+  padding: 0.875rem 2rem;
+  border-radius: 1rem;
+  background: #3671e9;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -289,6 +298,7 @@ nav {
   height: 10rem;
   color: white;
   padding-inline: 5rem;
+  /* i moved button to utils in scss folder so we can use it in other sections*/
 }
 nav .brand {
   display: flex;
@@ -306,8 +316,62 @@ nav hr {
   background: gray;
   border: none;
 }
-nav button {
-  padding: 0.875rem 2rem;
-  border-radius: 1rem;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+}
+.features__headline {
+  max-width: 31.25rem;
+  text-align: center;
+  padding-block: 1.25rem;
+}
+
+.feature {
+  padding-bottom: 4rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "col1 col1" "col2 col2";
+}
+@media only screen and (min-width: 64em) {
+  .feature {
+    grid-template-areas: "col1 col2";
+  }
+}
+@media only screen and (min-width: 64em) {
+  .feature.left {
+    grid-template-areas: "col2 col1";
+  }
+}
+.feature.left .feature__content {
+  place-self: center;
+}
+.feature__content {
+  grid-area: col1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  align-items: flex-start;
+  gap: 1.25rem;
+  overflow: wrap;
+}
+.feature__text {
+  color: hsl(0deg, 0%, 70%);
+  line-height: 1.2;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.feature__image {
+  grid-area: col2;
+}
+.cta {
   background: #3671e9;
+  padding-inline: 1rem;
+  border-radius: 0.625rem;
 }/*# sourceMappingURL=style.css.map */

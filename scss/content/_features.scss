@@ -1,0 +1,53 @@
+@use "../config/" as *;
+.features {
+  @include flex(column);
+  color: $white-text;
+  width: 100%;
+
+  &__headline {
+    max-width: rem(500);
+    text-align: center;
+    padding-block: $spacing-lg;
+  }
+}
+
+.feature {
+  padding-bottom: $spacing-3xl;
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "col1 col1" "col2 col2";
+  @include breakpoint-up(large) {
+    grid-template-areas: "col1 col2";
+  }
+  &.left {
+    @include breakpoint-up(large) {
+      grid-template-areas: "col2 col1";
+    }
+
+    .feature__content {
+      place-self: center;
+    }
+  }
+
+  &__content {
+    grid-area: col1;
+    @include flex(column);
+    align-items: flex-start;
+    gap: $spacing-lg;
+    overflow: wrap;
+  }
+  &__title {
+  }
+  &__text {
+    color: $sub-text;
+    line-height: 1.2;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  &__image {
+    grid-area: col2;
+  }
+  &__button {
+  }
+}
