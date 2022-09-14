@@ -1,84 +1,16 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -88,17 +20,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -106,20 +29,16 @@ body {
   line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -327,9 +246,7 @@ button {
 }
 
 @-webkit-keyframes load7 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 2.5em 0 -1.3em;
   }
   40% {
@@ -337,9 +254,7 @@ button {
   }
 }
 @keyframes load7 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 2.5em 0 -1.3em;
   }
   40% {
@@ -402,6 +317,47 @@ nav hr {
   border: none;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 8px;
+  padding: 0 5rem;
+  position: relative;
+}
+.hero .words {
+  flex: 1;
+}
+.hero .words .info {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 0.5rem;
+}
+.hero .words .info .white {
+  background: white;
+  border-radius: 2rem;
+  color: black;
+  padding: 4px 16px;
+}
+.hero .words .info .div {
+  color: white;
+}
+.hero .words h1 {
+  font-weight: 800;
+}
+.hero .words p {
+  max-width: 80%;
+}
+.hero img[class^=hero-bar-] {
+  position: absolute;
+}
+
 .features {
   display: flex;
   flex-direction: column;
@@ -457,45 +413,6 @@ nav hr {
 }
 .cta {
   background: #3671e9;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  color: white;
-  gap: 8px;
-  padding: 0 5rem;
-  position: relative;
-}
-.hero .words {
-  flex: 1;
-}
-.hero .words .info {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-right: 0.5rem;
-}
-.hero .words .info .white {
-  background: white;
-  border-radius: 2rem;
-  color: black;
-  padding: 4px 16px;
-}
-.hero .words .info .div {
-  color: white;
-}
-.hero .words h1 {
-  font-weight: 700;
-}
-.hero .words p {
-  max-width: 80%;
-}
-.hero img[class^="hero-bar-"] {
-  position: absolute;
-} /*# sourceMappingURL=style.css.map */
+  padding-inline: 1rem;
+  border-radius: 0.625rem;
+}/*# sourceMappingURL=style.css.map */
