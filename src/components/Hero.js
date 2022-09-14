@@ -1,5 +1,7 @@
 import React from 'react';
 import heroImage from '../assets/Illustration.svg';
+import heroBar1 from '../assets/hero-bar-1.png';
+import heroBar2 from '../assets/hero-bar-2.png';
 const Hero = () => {
 	return (
 		<div className="hero">
@@ -15,6 +17,8 @@ const Hero = () => {
 			<div className="image">
 				<img src={heroImage} alt="" />
 			</div>
+			<img src={heroBar1} alt="" className="hero-bar-1" />
+			<img src={heroBar2} alt="" className="hero-bar-2" />
 		</div>
 	);
 };

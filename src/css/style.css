@@ -318,6 +318,7 @@ nav button {
   color: white;
   gap: 8px;
   padding: 0 5rem;
+  position: relative;
 }
 .hero .words {
   flex: 1;
@@ -347,4 +348,7 @@ nav button {
 }
 .hero .words p {
   max-width: 80%;
+}
+.hero img[class^=hero-bar-] {
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
