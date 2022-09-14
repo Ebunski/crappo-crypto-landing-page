@@ -25,7 +25,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: $font-normal;
   text-transform: capitalize;
   line-height: 1.25;
@@ -64,6 +65,13 @@ h4 {
     px-to-rem(16),
     px-to-rem(10) + 1.2vw,
     px-to-rem(24)
+  ); //4.27vw; //16px
+}
+h5 {
+  font-size: clamp(
+    px-to-rem(16),
+    px-to-rem(10) + 1vw,
+    px-to-rem(20)
   ); //4.27vw; //16px
 }
 

@@ -38,6 +38,7 @@
     overflow: wrap;
   }
   &__title {
+    font-weight: $font-heavy;
   }
   &__text {
     color: $sub-text;

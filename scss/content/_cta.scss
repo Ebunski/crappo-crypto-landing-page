@@ -8,24 +8,39 @@
   border-radius: $radius-md;
   color: $white-text;
   margin-block: $spacing-3xl;
-  padding-block: $spacing-xl;
+
   &__bg {
     position: absolute;
     z-index: -1;
     &.etherum {
       top: 0;
       left: $spacing-2xl;
+      @include breakpoint-down(medium) {
+        left: $spacing-xl;
+      }
     }
     &.btc {
       bottom: 0;
       right: $spacing-xl;
+      @include breakpoint-down(medium) {
+        display: none;
+      }
     }
   }
   &__wrapper {
-    padding: $spacing-xl $spacing-2xl;
+    padding: $spacing-lg $spacing-md;
+    @include breakpoint-up(large) {
+      padding: $spacing-3xl $spacing-2xl;
+    }
+  }
+  &__title {
+    font-weight: $font-heavy;
   }
   &__content {
     @include flex(column);
+    align-items: flex-start;
+    gap: $spacing-md;
+
     @include breakpoint-up(large) {
       @include flex(row, space-between);
     }
@@ -34,16 +49,25 @@
     line-height: 1.2;
   }
   &__form {
-    @include flex(row);
+    @include flex(row, space-between);
     gap: $spacing-md;
+
+    @include breakpoint-down(medium) {
+      @include flex(column);
+      width: 100%;
+    }
   }
   &__input {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $background-color;
     padding-inline: 0;
-    min-width: rem(350);
     color: $white-text;
+    min-width: rem(350);
+
+    @include breakpoint-down(medium) {
+      min-width: 100%;
+    }
 
     &::placeholder {
       color: $white-text;

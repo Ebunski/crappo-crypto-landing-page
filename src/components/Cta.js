@@ -18,7 +18,7 @@ export default function Cta() {
       />
       <img className="cta__bg btc" src={btc} alt="" aria-hidden="true" />
       <div className="cta__wrapper">
-        <h4 className="cta__title">{"Start Mining Now"}</h4>
+        <h3 className="cta__title">{"Start Mining Now"}</h3>
         <div className="cta__content">
           <div className="cta__text">
             <p>
@@ -27,7 +27,6 @@ export default function Cta() {
             </p>
 
             <p>
-              {" "}
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
               saepe.
             </p>

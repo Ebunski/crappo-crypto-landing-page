@@ -75,7 +75,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.25;
@@ -106,6 +107,10 @@ h3 {
 
 h4 {
   font-size: clamp(1rem, 0.625rem + 1.2vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 0.625rem + 1vw, 1.25rem);
 }
 
 a {
@@ -408,6 +413,9 @@ nav hr {
   gap: 1.25rem;
   overflow: wrap;
 }
+.feature__title {
+  font-weight: 600;
+}
 .feature__text {
   color: hsl(0deg, 0%, 70%);
   line-height: 1.2;
@@ -426,7 +434,6 @@ nav hr {
   border-radius: 0.625rem;
   color: #fff;
   margin-block: 4rem;
-  padding-block: 2rem;
 }
 .cta__bg {
   position: absolute;
@@ -436,18 +443,38 @@ nav hr {
   top: 0;
   left: 3rem;
 }
+@media only screen and (max-width: 63.99875em) {
+  .cta__bg.etherum {
+    left: 2rem;
+  }
+}
 .cta__bg.btc {
   bottom: 0;
   right: 2rem;
 }
+@media only screen and (max-width: 63.99875em) {
+  .cta__bg.btc {
+    display: none;
+  }
+}
 .cta__wrapper {
-  padding: 2rem 3rem;
+  padding: 1.25rem 1rem;
+}
+@media only screen and (min-width: 64em) {
+  .cta__wrapper {
+    padding: 4rem 3rem;
+  }
+}
+.cta__title {
+  font-weight: 600;
 }
 .cta__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  align-items: flex-start;
+  gap: 1rem;
 }
 @media only screen and (min-width: 64em) {
   .cta__content {
@@ -468,15 +495,30 @@ nav hr {
   align-items: center;
   overflow: hidden;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
+}
+@media only screen and (max-width: 63.99875em) {
+  .cta__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
 }
 .cta__input {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #fff;
   padding-inline: 0;
-  min-width: 21.875rem;
   color: #fff;
+  min-width: 21.875rem;
+}
+@media only screen and (max-width: 63.99875em) {
+  .cta__input {
+    min-width: 100%;
+  }
 }
 .cta__input::-moz-placeholder {
   color: #fff;
@@ -489,4 +531,55 @@ nav hr {
 .cta__input::placeholder {
   color: #fff;
   text-indent: 0;
+}
+
+.footer {
+  color: #fff;
+}
+.footer--top {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 0rem;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  align-items: flex-start;
+  justify-items: flex-start;
+  padding-block: 2rem;
+}
+.footer--bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+.footer__links, .footer__payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.footer__payment--icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }/*# sourceMappingURL=style.css.map */
