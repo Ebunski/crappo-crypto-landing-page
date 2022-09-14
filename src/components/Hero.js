@@ -23,6 +23,7 @@ const Hero = () => {
 			<img src={heroBar2} alt="" className="hero-bar-2" />
 		</div>
 	);
+
 };
 
 export default Hero;

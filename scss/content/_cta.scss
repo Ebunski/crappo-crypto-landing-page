@@ -4,5 +4,6 @@
   background: $accent-color;
   padding-inline: $spacing-md;
   border-radius: $radius-md;
-//   @include grid(2, $spacing-md);
+  color: $white-text;
+  //   @include grid(2, $spacing-md);
 }
