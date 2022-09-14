@@ -8,14 +8,17 @@
   display: flex;
   flex-direction: $direction;
   align-items: center;
-  flex-wrap: wrap;
   overflow: hidden;
+  @if ($direction == row) {
+    flex-wrap: wrap;
+  }
+
   @if ($justify != false) {
     justify-content: $justify;
   }
 }
 
-@mixin grid($cols, $gap, $responsive: false) {
+@mixin grid($cols, $gap) {
   position: relative;
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
@@ -23,42 +26,6 @@
   gap: px-to-rem($gap);
   overflow: hidden;
   justify-items: center;
-  @if ($responsive == true) {
-    @include breakpoint-up(medium) {
-      grid-template-columns: repeat($cols + 1, 1fr);
-    }
-
-    @include breakpoint-up(large) {
-      grid-template-columns: repeat($cols + 2, 1fr);
-    }
-    @include breakpoint-up(xlarge) {
-      grid-template-columns: repeat($cols + 3, 1fr);
-      gap: px-to-rem($gap + 10);
-    }
-  }
-}
-
-@mixin grid-unequal($cols, $space, $gap, $responsive: false) {
-  position: relative;
-  display: grid;
-  grid-template-columns: $space;
-  grid-template-rows: auto;
-  gap: px-to-rem($gap);
-  overflow: hidden;
-  justify-items: center;
-  @if ($responsive == true) {
-    @include breakpoint-up(medium) {
-      grid-template-columns: repeat($cols + 1, 1fr);
-    }
-
-    @include breakpoint-up(large) {
-      grid-template-columns: repeat($cols + 2, 1fr);
-    }
-    @include breakpoint-up(xlarge) {
-      grid-template-columns: repeat($cols + 3, 1fr);
-      gap: px-to-rem($gap + 10);
-    }
-  }
 }
 
 @mixin top-right($top, $right) {
@@ -80,14 +47,14 @@
 }
 
 $breakpoints-up: (
-  "medium": px-to-em(700),
-  "large": px-to-em(900),
+  "medium": px-to-em(769),
+  "large": px-to-em(1024),
   "xlarge": px-to-em(1440),
 ) !default;
 $breakpoints-down: (
-  "small": px-to-em(699.98),
-  "medium": px-to-em(899.98),
-  "large": px-to-em(1439.98),
+  "small": px-to-em(478.98),
+  "medium": px-to-em(768.98),
+  "large": px-to-em(1023.98),
 ) !default;
 
 @mixin breakpoint-up($size) {

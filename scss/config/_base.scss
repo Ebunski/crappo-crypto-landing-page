@@ -92,22 +92,24 @@ section {
   margin-inline: auto;
   padding-top: $spacing-xl;
   color: var(--on-background);
-  padding-inline: $spacing-md;
   transition: $transition;
-
-  @include breakpoint-up(medium) {
-    padding-inline: $spacing-xl;
-  }
 }
 button {
   position: relative;
   padding: $spacing-sm;
-  background: transparent;
+  background: $accent-color;
   color: var(--on-background);
   text-transform: capitalize;
-  border: 3px solid var(--primary-color);
+  border: transparent;
   border-radius: $radius-sm;
   cursor: pointer;
   transition: $transition;
   z-index: 1;
+}
+.page-container {
+  width: 90vw;
+  margin-inline: auto;
+  @include breakpoint-up(medium) {
+    width: 85vw;
+  }
 }

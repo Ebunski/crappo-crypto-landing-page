@@ -21,7 +21,7 @@
   @if math.is-unitless($pixels) {
     @return math.div($pixels, 16) + rem;
   } @else {
-    @error "Don't add units to the em() function, only number";
+    @error "Don't add units to the rem() function, only number";
   }
 }
 

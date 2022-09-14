@@ -11,8 +11,10 @@ const Hero = () => {
 					<div>For the black friday weekend</div>
 				</div>
 				<h1>Fastest & secure platform to invest in crypto</h1>
-        <p>Buy and sell cryptocurrencies rom 10M wallets with over $30 billion in transactions</p>
-
+				<p>
+					Buy and sell cryptocurrencies rom 10M wallets with over $30 billion in
+					transactions
+				</p>
 			</div>
 			<div className="image">
 				<img src={heroImage} alt="" />
