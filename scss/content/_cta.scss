@@ -1,9 +1,53 @@
 @use "../config/" as *;
 
 .cta {
+  position: relative;
+  z-index: 1;
   background: $accent-color;
   padding-inline: $spacing-md;
   border-radius: $radius-md;
   color: $white-text;
-  //   @include grid(2, $spacing-md);
+  margin-block: $spacing-3xl;
+  padding-block: $spacing-xl;
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    &.etherum {
+      top: 0;
+      left: $spacing-2xl;
+    }
+    &.btc {
+      bottom: 0;
+      right: $spacing-xl;
+    }
+  }
+  &__wrapper {
+    padding: $spacing-xl $spacing-2xl;
+  }
+  &__content {
+    @include flex(column);
+    @include breakpoint-up(large) {
+      @include flex(row, space-between);
+    }
+  }
+  &__text {
+    line-height: 1.2;
+  }
+  &__form {
+    @include flex(row);
+    gap: $spacing-md;
+  }
+  &__input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $background-color;
+    padding-inline: 0;
+    min-width: rem(350);
+    color: $white-text;
+
+    &::placeholder {
+      color: $white-text;
+      text-indent: 0;
+    }
+  }
 }

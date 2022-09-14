@@ -78,7 +78,7 @@ a {
 
 p {
   margin-top: 0;
-  font-size: $font-base;
+  font-size: $font-sm;
 }
 ul {
   list-style-type: none;
@@ -87,10 +87,12 @@ main {
   height: 100%;
   width: 100%;
 }
+input {
+  outline: none;
+}
 
 section {
   margin-inline: auto;
-  padding-top: $spacing-xl;
   color: var(--on-background);
   transition: $transition;
 }

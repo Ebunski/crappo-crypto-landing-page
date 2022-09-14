@@ -1,40 +1,39 @@
-@use '../config/' as *;
+@use "../config/" as *;
 
 .hero {
-    display: flex;
-    align-items: center;
-    color: white;
-    gap: 8px;
-    padding: 0 $body-margin;
-    position: relative;
-    .words {
-        flex: 1;
-        .info {
-            width: max-content;
-            border-radius: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding-right: 0.5rem;
-            .white {
-                background: white;
-                border-radius: 2rem;
-                color: black;
-                padding: 4px 16px;
-            }
-            .div {
-                color: white;
-            }
-        }
-        h1 {
-            font-weight: 700;
-        }
-        p {
-            max-width: 80%;
-        }
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 8px;
+  position: relative;
+  .words {
+    flex: 1;
+    .info {
+      width: max-content;
+      border-radius: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-right: 0.5rem;
+      .white {
+        background: white;
+        border-radius: 2rem;
+        color: black;
+        padding: 4px 16px;
+      }
+      .div {
+        color: white;
+      }
     }
-    img[class^="hero-bar-"] {
-        position: absolute;
+    h1 {
+      font-weight: 700;
     }
+    p {
+      max-width: 80%;
+    }
+  }
+  img[class^="hero-bar-"] {
+    position: absolute;
+  }
 }

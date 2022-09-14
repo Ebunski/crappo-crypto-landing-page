@@ -26,6 +26,7 @@
   gap: px-to-rem($gap);
   overflow: hidden;
   justify-items: center;
+  align-items: center;
 }
 
 @mixin top-right($top, $right) {
@@ -44,6 +45,11 @@
   left: $val;
   bottom: $val;
   right: $val;
+}
+@mixin pseudo {
+  position: absolute;
+  content: "";
+  width: 100%;
 }
 
 $breakpoints-up: (

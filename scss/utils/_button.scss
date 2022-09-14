@@ -5,3 +5,8 @@
   border-radius: 1rem;
   background: $accent-color;
 }
+.button-white {
+  @extend .button;
+  background: $background-color;
+  color: $text-primary-color;
+}
