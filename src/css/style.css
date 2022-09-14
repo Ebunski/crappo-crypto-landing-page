@@ -64,7 +64,7 @@ html {
 
 body {
   background-color: var(--background-color);
-  color: var(--on-background);
+  color: hsl(0deg, 0%, 70%);
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
@@ -80,6 +80,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  color: #fff;
 }
 
 h1 {
@@ -117,10 +118,12 @@ a {
 p {
   margin-top: 0;
   font-size: 1rem;
+  color: hsl(0deg, 0%, 70%);
 }
 
 ul {
   list-style-type: none;
+  color: hsl(0deg, 0%, 70%);
 }
 
 main {
@@ -139,7 +142,7 @@ button {
   position: relative;
   padding: 0.625rem;
   background: #3671e9;
-  color: var(--on-background);
+  color: white;
   text-transform: capitalize;
   border: transparent;
   border-radius: 0.3125rem;
@@ -297,8 +300,11 @@ nav {
   justify-content: space-between;
   height: 10rem;
   color: white;
-  padding-inline: 5rem;
+  padding-inline: 1rem;
   /* i moved button to utils in scss folder so we can use it in other sections*/
+}
+nav .icon {
+  display: none;
 }
 nav .brand {
   display: flex;
@@ -310,20 +316,41 @@ nav ul {
   align-items: center;
   gap: 1rem;
 }
-nav hr {
+nav ul > div {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 48.0625em) {
+  nav ul > div {
+    padding-left: 1rem;
+  }
+}
+nav ul > div hr {
   height: 1.5rem;
   width: 1px;
-  background: gray;
+  background: hsl(0deg, 0%, 70%);
   border: none;
+  margin: 0 1rem;
+}
+@media only screen and (max-width: 48.06125em) {
+  nav ul {
+    display: none;
+  }
+  nav .icon {
+    display: block;
+  }
 }
 
 .hero {
   display: flex;
   align-items: center;
-  color: white;
-  gap: 8px;
-  padding: 0 5rem;
+  color: hsl(0deg, 0%, 70%);
   position: relative;
+}
+@media only screen and (max-width: 48.06125em) {
+  .hero {
+    flex-direction: column;
+  }
 }
 .hero .words {
   flex: 1;
@@ -349,13 +376,61 @@ nav hr {
   color: white;
 }
 .hero .words h1 {
-  font-weight: 800;
+  font-weight: 700;
+  padding: 1.2rem 0;
 }
 .hero .words p {
-  max-width: 80%;
+  max-width: 70%;
+  padding-bottom: 1.8rem;
+}
+.hero .words button {
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}
+.hero .words button .button-img {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 50%;
+}
+.hero .image {
+  flex-basis: 50%;
+}
+.hero .image img {
+  width: 100%;
 }
 .hero img[class^=hero-bar-] {
   position: absolute;
+  z-index: -1;
+}
+@media only screen and (max-width: 48.06125em) {
+  .hero img[class^=hero-bar-] {
+    width: 100%;
+  }
+}
+.hero .hero-bar-1 {
+  left: -1rem;
+  bottom: -7rem;
+}
+@media only screen and (max-width: 48.06125em) {
+  .hero .hero-bar-1 {
+    left: 0;
+    right: 0;
+  }
+}
+.hero .hero-bar-2 {
+  right: -5rem;
+}
+@media only screen and (max-width: 48.06125em) {
+  .hero .hero-bar-2 {
+    right: 0;
+    bottom: 15rem;
+  }
 }
 
 .features {
@@ -415,4 +490,5 @@ nav hr {
   background: #3671e9;
   padding-inline: 1rem;
   border-radius: 0.625rem;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

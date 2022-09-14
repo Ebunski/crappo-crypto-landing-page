@@ -14,7 +14,7 @@ html {
 
 body {
   background-color: var(--background-color);
-  color: var(--on-background);
+  color: $sub-text;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
@@ -26,10 +26,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: $font-normal;
+  font-weight: $font-heavy;
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: px-to-rem(12);
+  color: $white-text;
 }
 
 //----font-sizes: 16px,28px,32px,36px,42px,48px,54px,60px
@@ -79,9 +80,11 @@ a {
 p {
   margin-top: 0;
   font-size: $font-base;
+  color: $sub-text;
 }
 ul {
   list-style-type: none;
+  color: $sub-text;
 }
 main {
   height: 100%;
@@ -98,7 +101,7 @@ button {
   position: relative;
   padding: $spacing-sm;
   background: $accent-color;
-  color: var(--on-background);
+  color: white;
   text-transform: capitalize;
   border: transparent;
   border-radius: $radius-sm;
