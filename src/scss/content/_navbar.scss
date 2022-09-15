@@ -1,0 +1,59 @@
+@use '../config/' as *;
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10rem;
+	color: white;
+	padding-inline: $spacing-md;
+
+	.icon {
+		display: none;
+	}
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		> div {
+			display: flex;
+			align-items: center;
+			@include breakpoint-up(medium) {
+				padding-left: 1rem;
+			}
+			hr {
+				height: rem(24);
+				width: 1px;
+				background: $sub-text;
+				border: none;
+				margin: 0 1rem;
+			}
+		}
+	}
+	@include breakpoint-down(medium) {
+		ul {
+			display: none;
+		}
+		.icon {
+			display: block;
+		}
+		// position: fixed;
+		// inset: 0;
+		// background: $secondary-color;
+		// flex-direction: column;
+		// ::before {
+		//   font-family: "Font Awesome 5 Free";
+		//   content: "\f00d";
+		//   display: block;
+		//   position: absolute;
+		//   top: 1.5rem;
+		//   right: 1.5rem;
+		//   color: white;
+	}
+	/* i moved button to utils in scss folder so we can use it in other sections*/
+}

@@ -1,0 +1,25 @@
+@use '../config' as *;
+
+.why-us {
+	position: relative;
+	[class^='bg-tile-'] {
+		position: absolute;
+	}
+	.bg-tile-1 {
+		background: linear-gradient(
+			120deg,
+			rgba(255, 255, 255, 0.08) 24.01%,
+			rgba(53, 6, 140, 0.01) 71.35%
+		);
+		transform: rotate(-30deg);
+		left: 0;
+	}
+	.bg-tile-2 {
+		background: linear-gradient(
+			120deg,
+			rgba(255, 255, 255, 0.08) 26.97%,
+			rgba(255, 255, 255, 0) 71.35%
+		);
+		right: 0;
+	}
+}
