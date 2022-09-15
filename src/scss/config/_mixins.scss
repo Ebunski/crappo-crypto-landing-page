@@ -26,6 +26,7 @@
   gap: px-to-rem($gap);
   overflow: hidden;
   justify-items: center;
+  align-items: center;
 }
 
 @mixin top-right($top, $right) {
@@ -45,16 +46,22 @@
   bottom: $val;
   right: $val;
 }
+@mixin pseudo {
+  position: absolute;
+  content: "";
+  width: 100%;
+}
 
 $breakpoints-up: (
+  "small": px-to-em(480),
   "medium": px-to-em(769),
   "large": px-to-em(1024),
   "xlarge": px-to-em(1440),
 ) !default;
 $breakpoints-down: (
-  "small": px-to-em(478.98),
-  "medium": px-to-em(768.98),
-  "large": px-to-em(1023.98),
+  "xsmall": px-to-em(478.98),
+  "small": px-to-em(768.98),
+  "medium": px-to-em(1023.98),
 ) !default;
 
 @mixin breakpoint-up($size) {

@@ -25,7 +25,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: $font-heavy;
   text-transform: capitalize;
   line-height: 1.25;
@@ -67,6 +68,13 @@ h4 {
     px-to-rem(24)
   ); //4.27vw; //16px
 }
+h5 {
+  font-size: clamp(
+    px-to-rem(16),
+    px-to-rem(10) + 1vw,
+    px-to-rem(20)
+  ); //4.27vw; //16px
+}
 
 a {
   color: var(--secondary-color);
@@ -79,7 +87,7 @@ a {
 
 p {
   margin-top: 0;
-  font-size: $font-base;
+  font-size: $font-sm;
   color: $sub-text;
 }
 ul {
@@ -90,10 +98,12 @@ main {
   height: 100%;
   width: 100%;
 }
+input {
+  outline: none;
+}
 
 section {
   margin-inline: auto;
-  padding-top: $spacing-xl;
   color: var(--on-background);
   transition: $transition;
 }

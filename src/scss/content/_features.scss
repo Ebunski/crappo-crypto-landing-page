@@ -38,10 +38,12 @@
     overflow: wrap;
   }
   &__title {
+    font-weight: $font-heavy;
   }
   &__text {
     color: $sub-text;
     line-height: 1.2;
+    white-space: pre-wrap;
     word-break: break-word;
     word-wrap: break-word;
   }
