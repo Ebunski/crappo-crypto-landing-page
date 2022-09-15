@@ -4,14 +4,18 @@ import featuresData from "../utils/featuresData";
 export default function Statistics() {
   const featureSections = featuresData.map((x, index) => {
     const { left, img, title, subtext } = x;
+
     return (
-      <section key={index} className={`feature ${left && "left"}`}>
+      <section key={index} className={`feature ${left ? "left" : ""}`}>
         <div className="feature__content">
           <h3 className="feature__title">{title}</h3>
           <p className="feature__text">{subtext}</p>
           <button className="button feature__button">learn more</button>
         </div>
-        <img className={`feature__image}`} src={img} alt={title} />
+        <div className={`feature__image--container`}>
+          {" "}
+          <img className={`feature__image`} src={img} alt={title} />
+        </div>
       </section>
     );
   });

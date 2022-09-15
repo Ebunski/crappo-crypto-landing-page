@@ -2,24 +2,28 @@
 .footer {
   color: $white-text;
 
-  &--top {
-    @include grid(4, 0);
-    grid-template-columns: 1fr 1fr 1fr 1.5fr;
-    align-items: flex-start;
-    justify-items: flex-start;
-    padding-block: $spacing-xl;
-  }
+  &--top,
   &--bottom {
     @include flex(row, space-between);
+    align-items: flex-start;
     padding-block: $spacing-xl;
+    @include breakpoint-down(medium) {
+      @include flex(column);
+      gap: $spacing-2xl;
+    }
   }
+
   &__links,
   &__payment {
     @include flex(column);
     gap: $spacing-md;
     align-items: flex-start;
+    @include breakpoint-down(medium) {
+      align-items: center;
+    }
   }
   &__payment--title {
+    padding-bottom: $spacing-md;
   }
   &__payment--icons {
     @include flex(row);
@@ -27,6 +31,6 @@
   }
   &__socials {
     @include flex(row);
-    gap: $spacing-lg;
+    gap: $spacing-xl;
   }
 }

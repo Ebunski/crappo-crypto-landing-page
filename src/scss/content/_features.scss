@@ -3,6 +3,11 @@
   @include flex(column);
   color: $white-text;
   width: 100%;
+  padding-top: $spacing-xl;
+
+  p {
+    font-size: $font-sm;
+  }
 
   &__headline {
     max-width: rem(500);
@@ -43,13 +48,19 @@
   &__text {
     color: $sub-text;
     line-height: 1.2;
-    white-space: pre-wrap;
-    word-break: break-word;
-    word-wrap: break-word;
+    // white-space: pre-wrap;
+    // word-break: break-word;
+    // word-wrap: break-word;
   }
-  &__image {
+  &__image--container {
     grid-area: col2;
   }
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    /*for objecct-fit to work, images need to have a width and height */
+  }
+
   &__button {
   }
 }
