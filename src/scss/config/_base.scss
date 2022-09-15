@@ -37,29 +37,39 @@ h5 {
 //----font-sizes: 16px,28px,32px,36px,42px,48px,54px,60px
 
 h1 {
-  font-size: px-to-rem(48);
+  font-size: px-to-rem(64);
+  line-height: rem(75.84);
+font-weight: 700;
+  
 
-  @include breakpoint-up(medium) {
-    font-size: px-to-rem(54);
-  }
-  @include breakpoint-up(large) {
-    font-size: px-to-rem(60);
-  }
+//  @include breakpoint-up(medium) {
+//    font-size: px-to-rem(54);
+//  }
+//  @include breakpoint-up(large) {
+//    font-size: px-to-rem(64);
+//  }
 }
 //----------OR------------------//
 h2 {
-  font-size: clamp(
-    px-to-rem(32),
-    px-to-rem(16) + 2vw,
-    px-to-rem(48)
-  ); //8.53vw; //32px
+font-size: px-to-rem(40);
+line-height: rem(60);
+font-weight: 700;
+//  font-size: clamp(
+//    px-to-rem(32),
+//    px-to-rem(16) + 2vw,
+//    px-to-rem(48)
+//  ); //8.53vw; //32px
 }
 h3 {
-  font-size: clamp(
-    px-to-rem(28),
-    px-to-rem(14) + 1.6vw,
-    px-to-rem(30)
-  ); //7.47vw; //28px
+font-size: rem(32);
+line-height: rem(48);
+font-weight: 700;
+
+//  font-size: clamp(
+//    px-to-rem(28),
+//    px-to-rem(14) + 1.6vw,
+//    px-to-rem(30)
+//  ); //7.47vw; //28px
 }
 h4 {
   font-size: clamp(

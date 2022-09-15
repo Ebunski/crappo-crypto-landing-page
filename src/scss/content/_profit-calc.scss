@@ -17,6 +17,11 @@
         .calculator {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem 0;
+            @include breakpoint-down(medium) {
+                translate: -50% 10%;
+            }
             input, select {
                 border: none;
                 border-bottom: 1px solid gray;

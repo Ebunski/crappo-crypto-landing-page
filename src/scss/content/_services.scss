@@ -10,19 +10,89 @@ div#root > .services {
 	}
 	.content {
         width: 90%;
+        margin: auto;
         @include breakpoint-down(medium) {
             width: 85%;
         }
-
 		> h2 {
 			color: black;
+	        margin: auto;
+	        max-width: rem(741);
 		}
 		.currencies {
 			display: flex;
+			padding: 4rem 0;
+			justify-content: space-between;
+			@include breakpoint-down(medium) {
+				flex-direction: column;
+			}
             > div {
                 border-radius: 0.5rem;
                 padding: 1.5rem;
+                flex-basis:28%;
+                transition-property: color, background;
+                transition-duration: .3s;
+                .image {
+                	height: 3.5rem;
+                	margin: 2rem 0;
+                	img {
+                		height: 100%;
+                	}
+                }
+                p {
+            		margin-bottom: 2rem;
+            	}
+            	button {
+            		border-radius: 50%;
+            		background: transparent;
+            		border: 1px solid gray;
+            		width: 2.5rem;
+            		height: 2.5rem;
+            		display: grid;
+            		place-items: center;
+            		margin: auto;
+            	}
+            	&.ready {
+            		background: $secondary-color;
+            		h3 {
+            			color: white;
+            		}
+            		button {
+            			display: flex;
+            			gap: 1rem;
+            			background: $accent-color;
+            			width: auto;
+            			height: auto;
+            			border: none;
+            			border-radius: rem(32);
+
+            			.button-img {
+            				border-radius: 50%;
+            				width: 1.5rem;
+            				height: 1.5rem;
+            				background: white;
+            				display: grid;
+            				place-items: center;
+            			}
+            			&::before {
+            				content: "Start Mining";
+            				display: block;
+            				color: white;
+            				position: static;
+            			}
+            		}
+            	}
             }
+            .name {
+            	display: flex;
+            	align-items: center;
+            	justify-content: center;
+            	gap: 1rem;
+            	h3 {
+            		color: black;
+            	}
+            }
+
 
 		}
 	}
