@@ -2,24 +2,45 @@
 
 .why-us {
 	position: relative;
+	display: flex;
+	justify-content: space-between;
 	[class^='bg-tile-'] {
 		position: absolute;
+		z-index: -1;
 	}
 	.bg-tile-1 {
-		background: linear-gradient(
-			120deg,
-			rgba(255, 255, 255, 0.08) 24.01%,
-			rgba(53, 6, 140, 0.01) 71.35%
-		);
-		transform: rotate(-30deg);
-		left: 0;
+		right: 0;
+		bottom: 0;
 	}
 	.bg-tile-2 {
-		background: linear-gradient(
-			120deg,
-			rgba(255, 255, 255, 0.08) 26.97%,
-			rgba(255, 255, 255, 0) 71.35%
-		);
 		right: 0;
+		top: -5rem;
+	}
+	.bg-tile-3 {
+		left: -5rem;
+		@include breakpoint-down(medium) {
+			left: 0;
+		}
+	}
+	> div {
+		flex-basis: 50%;
+	}
+	.words {
+		@include flex(column, center);
+		align-items: flex-start;
+		gap: 1.7rem;
+		max-width: 29rem;
+		button {
+			border-radius: rem(32);
+		}
+	}
+	.image {
+		img {
+			width: 100%;
+		}
+	}
+	@include breakpoint-down(medium) {
+		flex-direction: column;
+		gap: 3rem;
 	}
 }
