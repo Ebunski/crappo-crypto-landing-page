@@ -36,16 +36,16 @@ const footerData = {
     title: " © 2022 CRAPPO. All rights reserved.",
     icons: [
       {
-        alt: "youtube",
-        src: require("../assets/youtube.png"),
-      },
-      {
-        alt: "whatsapp",
-        src: require("../assets/instagram.png"),
+        alt: "facebook",
+        src: require("../assets/Vector-facebook.png"),
       },
       {
         alt: "instagram",
         src: require("../assets/instagram.png"),
+      },
+      {
+        alt: "youtube",
+        src: require("../assets/youtube.png"),
       },
       {
         alt: "twitter",

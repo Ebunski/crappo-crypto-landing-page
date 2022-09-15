@@ -6,12 +6,18 @@ import Litecoin from '../assets/litecoin.svg';
 
 
 const Services = () => {
+	const onClick = (e) => {
+		e.target.parentNode.childNodes.forEach((elem) => {
+			elem.classList.remove('ready');
+		})
+		e.target.classList.add('ready');
+	}
 	return (
 		<div className="services">
 			<div className="content">
 				<h2>Trade securely and market the high growth cryptocurrencies</h2>
 				<div className="currencies">
-					<div className="bitcoin ready">
+					<div className="bitcoin ready" onClick={(e) => onClick(e)}>
 						<div className="image">
 							<img src={Bitcoin} alt="" />
 						</div>
@@ -28,7 +34,7 @@ const Services = () => {
 							</div>
 						</button>
 					</div>
-					<div className="ethereum">
+					<div className="ethereum" onClick={(e) => onClick(e)}>
 						<div className="image">
 							<img src={Ethereum} alt="" />
 						</div>
@@ -46,7 +52,7 @@ const Services = () => {
 							</div>
 						</button>
 					</div>
-					<div className="litecoin">
+					<div className="litecoin" onClick={(e) => onClick(e)}>
 						<div className="image">
 							<img src={Litecoin} alt="" />
 						</div>
