@@ -20,7 +20,7 @@ const footerData = {
     icons: [
       {
         alt: "visa",
-        src: require("../assets/visa.png"),
+        src: require("../assets/Visa.png"),
       },
       {
         alt: "mastercard",
@@ -40,8 +40,8 @@ const footerData = {
         src: require("../assets/youtube.png"),
       },
       {
-        alt: "whatsapp",
-        src: require("../assets/instagram.png"),
+        alt: "facebook",
+        src: require("../assets/facebook.png"),
       },
       {
         alt: "instagram",

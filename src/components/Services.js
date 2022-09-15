@@ -7,9 +7,9 @@ import Litecoin from '../assets/litecoin.svg';
 
 const Services = () => {
 	return (
-		<div className="services">
+		<div className="services" >
 			<div className="content">
-				<h2>Trade securely and market the high growth cryptocurrencies</h2>
+				<h2 data-aos="fade-in">Trade securely and market the high growth cryptocurrencies</h2>
 				<div className="currencies">
 					<div className="bitcoin ready">
 						<div className="image">

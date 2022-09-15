@@ -10,9 +10,14 @@ export default function Statistics() {
         <div className="feature__content">
           <h3 className="feature__title">{title}</h3>
           <p className="feature__text">{subtext}</p>
-          <button className="button feature__button">learn more</button>
+          <button
+            data-aos={`${left ? "fade-left" : "zoom-in"}`}
+            className="button feature__button"
+          >
+            learn more
+          </button>
         </div>
-        <div className={`feature__image--container`}>
+        <div data-aos="fade-up" className={`feature__image--container`}>
           {" "}
           <img className={`feature__image`} src={img} alt={title} />
         </div>
@@ -28,7 +33,7 @@ export default function Statistics() {
 
   return (
     <div className="features">
-      <h3 className="features__headline">
+      <h3 className="features__headline" data-aos="zoom-in">
         Market Sentiments, Portfolio, And Run The Infrastructure Of Your Choice
       </h3>
       {featureSections}

@@ -9,7 +9,7 @@ export default function Cta() {
     formRef.current.value = "";
   }
   return (
-    <section className="cta">
+    <section className="cta" data-aos="zoom-in">
       <img
         className="cta__bg etherum"
         src={etherum}
