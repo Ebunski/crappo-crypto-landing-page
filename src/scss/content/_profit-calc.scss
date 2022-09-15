@@ -1,0 +1,56 @@
+@use '../config/' as *;
+
+.profit-calc {
+    text-align: center;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+    .calc {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        width: min(85%, rem(700));
+        position: absolute;
+        left: 50%;
+        translate: -50% 50%;
+        box-shadow: 0 5px 10px 0px #8080805c;
+        .calculator {
+            display: flex;
+            justify-content: space-between;
+            input, select {
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+            input {
+                flex-basis: 40%;
+            }
+            select {
+                flex-basis: 25%;
+                &:focus {
+                    border-left: none;
+                    border-right: none;
+                    border-top: none;
+                    outline: none;
+                }
+            }
+            button {
+                border-radius: rem(32);
+            }
+        }
+        .result {
+            text-align: start;
+            margin-top: 5rem;
+            &-header {
+                color: $accent-color;
+                font-weight: 500;
+            }
+            h2 {
+                color: black;
+                span {
+                    color: $accent-color;
+                }
+            }
+
+        }
+    }
+}

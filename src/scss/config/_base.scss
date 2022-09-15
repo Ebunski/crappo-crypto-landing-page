@@ -87,8 +87,11 @@ a {
 
 p {
   margin-top: 0;
-  font-size: $font-sm;
+  font-size: $font-base;
+  //font-sm is too small for the p tag
+  // font-size: $font-sm;
   color: $sub-text;
+  line-height: 1.4rem;
 }
 ul {
   list-style-type: none;
@@ -119,7 +122,7 @@ button {
   transition: $transition;
   z-index: 1;
 }
-.page-container {
+div#root > div, div#root > section, nav {
   width: 90vw;
   margin-inline: auto;
   @include breakpoint-up(medium) {

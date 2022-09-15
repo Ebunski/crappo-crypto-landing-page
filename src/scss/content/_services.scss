@@ -1,0 +1,29 @@
+@use '../config' as *;
+
+div#root > .services {
+	background: white;
+	width: 100vw;
+	padding-top: 20rem;
+	text-align: center;
+	@include breakpoint-up(medium) {
+		width: 100vw;
+	}
+	.content {
+        width: 90%;
+        @include breakpoint-down(medium) {
+            width: 85%;
+        }
+
+		> h2 {
+			color: black;
+		}
+		.currencies {
+			display: flex;
+            > div {
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+            }
+
+		}
+	}
+}
