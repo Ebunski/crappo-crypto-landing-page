@@ -48,6 +48,10 @@ const footerData = {
         src: require("../assets/instagram.png"),
       },
       {
+        alt: "youtube",
+        src: require("../assets/youtube.png"),
+      },
+      {
         alt: "twitter",
         src: require("../assets/twitter.png"),
       },
