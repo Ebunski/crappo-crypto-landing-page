@@ -20,9 +20,25 @@ export default function Navbar() {
 					<button className="button btn-call">Register</button>
 				</div>
 			</ul>
-			<div className="icon">
+			<div className="icon-bars">
 				< FaBars />
 			</div>
+			{/*<div className="mobilenav">
+				<div className="icon">
+					<FaBars />
+				</div>
+				<ul>
+					<li>Products</li>
+					<li>Features</li>
+					<li>About</li>
+					<li>Contact</li>
+					<div>
+						<div className="login">Login</div>
+						<hr />
+						<button className="button btn-call">Register</button>
+					</div>
+			</ul>
+			</div>*/}
 		</nav>
 	);
 }

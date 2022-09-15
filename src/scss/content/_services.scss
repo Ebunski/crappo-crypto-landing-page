@@ -2,11 +2,11 @@
 
 div#root > .services {
 	background: white;
-	width: 100vw;
 	padding-top: 20rem;
 	text-align: center;
+	width: 100vw;
 	@include breakpoint-up(medium) {
-		width: 100vw;
+		width: 98.6vw;
 	}
 	.content {
         width: 90%;

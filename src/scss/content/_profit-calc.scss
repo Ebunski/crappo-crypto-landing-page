@@ -14,14 +14,15 @@
         left: 50%;
         translate: -50% 50%;
         box-shadow: 0 5px 10px 0px #8080805c;
+        @include breakpoint-down(medium) {
+                translate: -50% 10%;
+         }
         .calculator {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 1rem 0;
-            @include breakpoint-down(medium) {
-                translate: -50% 10%;
-            }
+            
             input, select {
                 border: none;
                 border-bottom: 1px solid gray;
