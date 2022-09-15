@@ -34,7 +34,6 @@
     }
   }
   &__title {
-    font-weight: $font-heavy;
   }
   &__content {
     @include flex(column);
@@ -46,7 +45,10 @@
     }
   }
   &__text {
-    line-height: 1.2;
+    p {
+      font-size: $font-sm;
+      line-height: 1.2;
+    }
   }
   &__form {
     @include flex(row, space-between);
