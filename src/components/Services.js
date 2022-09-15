@@ -11,7 +11,7 @@ const Services = () => {
 			<div className="content">
 				<h2>Trade securely and market the high growth cryptocurrencies</h2>
 				<div className="currencies">
-					<div className="bitcoin">
+					<div className="bitcoin ready">
 						<div className="image">
 							<img src={Bitcoin} alt="" />
 						</div>
