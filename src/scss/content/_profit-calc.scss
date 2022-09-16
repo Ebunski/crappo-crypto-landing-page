@@ -15,7 +15,7 @@
     translate: 0 50%;
     box-shadow: 0 5px 10px 0px #8080805c;
     @include breakpoint-down(medium) {
-      translate: 0 10%;
+      translate: 0 20%;
     }
     .calculator {
       display: flex;
