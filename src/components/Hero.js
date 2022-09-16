@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="hero">
       <div className="words">
         <div className="info">
-          <div data-aos="zoom-in" className="white">
+          <div className="white" data-aos="zoom-in">
             75% SAVE
           </div>
           <div>For the black friday weekend</div>
@@ -21,9 +21,18 @@ const Hero = () => {
           Buy and sell cryptocurrencies rom 10M wallets with over $30 billion in
           transactions
         </p>
-        <button data-aos="fade-down">
+        <button
+          data-aos="fade-down"
+          data-aos-once="true"
+          data-aos-mirror="false"
+        >
           <div className="text">Try for FREE</div>
-          <div data-aos="fade-right" className="button-img">
+          <div
+            data-aos="fade-right"
+            data-aos-once="true"
+            data-aos-mirror="false"
+            className="button-img"
+          >
             <img src={arrowRight} alt="arrowRight" />
           </div>
         </button>
@@ -31,6 +40,7 @@ const Hero = () => {
       <div data-aos="zoom-in" className="image">
         <img src={heroImage} alt="" />
       </div>
+      s
       <img src={heroBar1} alt="" className="hero-bar-1" />
       <img src={heroBar2} alt="" className="hero-bar-2" />
     </div>

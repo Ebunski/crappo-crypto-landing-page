@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export function useScrollAnimation() {
+export function useAos() {
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -17,7 +17,7 @@ export function useScrollAnimation() {
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
       offset: 100, // offset (in px) from the original trigger point
-      delay: 2000, // values from 0 to 3000, with step 50ms
+      delay: 50, // values from 0 to 3000, with step 50ms
       duration: 3000, // values from 0 to 3000, with step 50ms
       easing: "ease-in-out", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down

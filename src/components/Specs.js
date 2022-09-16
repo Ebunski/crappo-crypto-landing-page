@@ -4,8 +4,8 @@ import Person from "../assets/Person.svg";
 import World from "../assets/world.svg";
 const Specs = () => {
   return (
-    <div className="specs" data-aos="fade-up">
-      <div className="spec">
+    <div className="specs">
+      <div className="spec" data-aos="fade-up">
         <div className="image">
           <img src={Statistic} alt="Statistic" />
         </div>
@@ -18,7 +18,7 @@ const Specs = () => {
           </div>
         </div>
       </div>
-      <div className="spec">
+      <div className="spec" data-aos="fade-up">
         <div className="image">
           <img src={Person} alt="Person" />
         </div>
@@ -31,7 +31,7 @@ const Specs = () => {
           </div>
         </div>
       </div>
-      <div className="spec">
+      <div className="spec" data-aos="fade-up">
         <div className="image">
           <img src={World} alt="World" />
         </div>

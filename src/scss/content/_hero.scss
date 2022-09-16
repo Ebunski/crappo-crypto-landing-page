@@ -1,84 +1,88 @@
-@use '../config/' as *;
+@use "../config/" as *;
 
 .hero {
-	display: flex;
-    @include breakpoint-down(medium) {
-        flex-direction: column;
+  display: flex;
+  @include breakpoint-up(large) {
+    height: calc(100vh - 10rem);
+  }
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+  align-items: center;
+  color: $sub-text;
+  position: relative;
+  .words {
+    flex: 1;
+    .info {
+      width: max-content;
+      border-radius: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-right: 0.5rem;
+      .white {
+        background: white;
+        border-radius: 2rem;
+        color: black;
+        padding: 4px 16px;
+      }
+      .div {
+        color: white;
+      }
     }
-	align-items: center;
-	color: $sub-text;
-	position: relative;
-	.words {
-		flex: 1;
-		.info {
-			width: max-content;
-			border-radius: 2rem;
-			background: rgba(255, 255, 255, 0.1);
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-			padding-right: 0.5rem;
-			.white {
-				background: white;
-				border-radius: 2rem;
-				color: black;
-				padding: 4px 16px;
-			}
-			.div {
-				color: white;
-			}
-		}
-		h1 {
-			font-weight: 700;
-			padding: 1.2rem 0;
-		}
-		p {
-			max-width: 70%;
-			padding-bottom: 1.8rem;
-		}
-		button {
-			display: flex;
-			align-items: center;
-			border-radius: rem(32);
-			gap: rem(24);
-			padding-left: 1rem;
-			.button-img {
-				width: rem(32);
-				height: rem(32);
-				display: grid;
-				place-items: center;
-                background: white;
-                border-radius: 50%;
-			}
-		}
-	}
-	.image {
-		flex-basis: 50%;
-		// flex-basis: calc(33rem + rem(23));
-		img {
-			width: 100%;
-		}
-	}
-	img[class^='hero-bar-'] {
-		position: absolute;
-		z-index: -1;
-        @include breakpoint-down(medium) {
-            width: 100%;
-        }
-	}
-	.hero-bar-1 {
-		left: -1rem;
-		bottom: -7rem;
-        @include breakpoint-down(medium) {
-            left: 0;
-			right: 0;
-        }
-	}
-	.hero-bar-2 {
-		right: -5rem;
-        @include breakpoint-down(medium) {
-            right: 0;
-            bottom: 15rem;
-        }
-	}
+    h1 {
+      font-weight: 700;
+      padding: 1.2rem 0;
+    }
+    p {
+      max-width: 70%;
+      padding-bottom: 1.8rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      border-radius: rem(32);
+      gap: rem(24);
+      padding-left: 1rem;
+      .button-img {
+        width: rem(32);
+        height: rem(32);
+        display: grid;
+        place-items: center;
+        background: white;
+        border-radius: 50%;
+      }
+    }
+  }
+  .image {
+    flex-basis: 50%;
+    // flex-basis: calc(33rem + rem(23));
+    img {
+      width: 100%;
+    }
+  }
+  img[class^="hero-bar-"] {
+    position: absolute;
+    z-index: -1;
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
+  }
+  .hero-bar-1 {
+    left: -1rem;
+    bottom: -7rem;
+    @include breakpoint-down(medium) {
+      left: 0;
+      right: 0;
+    }
+  }
+  .hero-bar-2 {
+    right: -5rem;
+    @include breakpoint-down(medium) {
+      right: 0;
+      bottom: 15rem;
+    }
+  }
 }
