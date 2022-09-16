@@ -41,8 +41,8 @@ const Hero = () => {
         <img src={heroImage} alt="" />
       </div>
       s
-      <img src={heroBar1} alt="" className="hero-bar-1" />
-      <img src={heroBar2} alt="" className="hero-bar-2" />
+      <img src={heroBar1} alt="" data-aos="zoom-in" className="hero-bar-1" />
+      <img src={heroBar2} alt="" data-aos="zoom-in" className="hero-bar-2" />
     </div>
   );
 };
