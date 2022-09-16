@@ -101,7 +101,7 @@ div#root > section,
 nav {
   width: 90vw;
   margin-inline: auto;
-  overflow: hidden;
+
   @include breakpoint-up(medium) {
     width: 85vw;
   }

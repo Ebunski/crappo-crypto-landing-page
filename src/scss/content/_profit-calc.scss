@@ -11,10 +11,12 @@
     border-radius: 0.5rem;
     width: min(85%, rem(700));
     position: absolute;
-    margin-top: $spacing-lg;
     left: calc((100% - min(85%, rem(700))) / 2);
+    translate: 0 50%;
     box-shadow: 0 5px 10px 0px #8080805c;
-
+    @include breakpoint-down(medium) {
+      translate: 0 10%;
+    }
     .calculator {
       display: flex;
       justify-content: space-between;
