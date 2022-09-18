@@ -4,27 +4,27 @@ import logo from "../assets/Logo.png";
 
 export default function Navbar() {
   return (
-    <nav>
-      <div className="brand">
-        <img src={logo} alt="Logo" />
-      </div>
-      <ul>
-        <li>Products</li>
-        <li>Features</li>
-        <li>About</li>
-        <li>Contact</li>
-        <div>
-          <div className="login">Login</div>
-          <hr />
-          <button className="button btn-call">Register</button>
-        </div>
-      </ul>
-      <div className="icon-bars">
-        <FaBars />
-      </div>
-      {/*<div className="mobilenav">
+		<nav>
+			<div className="brand">
+				<img src={logo} alt="Logo" />
+			</div>
+			<ul>
+				<li>Products</li>
+				<li>Features</li>
+				<li>About</li>
+				<li>Contact</li>
+				<div>
+					<div className="login">Login</div>
+					<hr />
+					<button className="button btn-call">Register</button>
+				</div>
+			</ul>
+			<div className="icon-bars">
+				<FaBars />
+			</div>
+			<div className="mobilenav">
 				<div className="icon">
-					<FaBars />
+					<i class="fa fa-solid fa-xmark"></i>
 				</div>
 				<ul>
 					<li>Products</li>
@@ -36,8 +36,8 @@ export default function Navbar() {
 						<hr />
 						<button className="button btn-call">Register</button>
 					</div>
-			</ul>
-			</div>*/}
-    </nav>
-  );
+				</ul>
+			</div>
+		</nav>
+	);
 }

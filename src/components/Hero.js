@@ -40,7 +40,6 @@ const Hero = () => {
       <div data-aos="zoom-in" className="image">
         <img src={heroImage} alt="" />
       </div>
-      s
       <img src={heroBar1} alt="" data-aos="zoom-in" className="hero-bar-1" />
       <img src={heroBar2} alt="" data-aos="zoom-in" className="hero-bar-2" />
     </div>

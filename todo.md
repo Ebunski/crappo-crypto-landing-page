@@ -1,5 +1,0 @@
-- Style last section.
-- Fix responsiveness of done sections.
-- Fix header. 
-- Do that click thingy.
-- Scroll animations. 

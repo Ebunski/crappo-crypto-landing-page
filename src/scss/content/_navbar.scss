@@ -35,6 +35,9 @@ nav {
 			}
 		}
 	}
+	.mobilenav {
+		display: none;
+	}
 	@include breakpoint-down(medium) {
 		> ul {
 			display: none;
@@ -43,6 +46,7 @@ nav {
 			display: block;
 		}
 		.mobilenav {
+			display: grid;
 			position: fixed;
 			inset: 0;
 			background: $secondary-color;
@@ -67,5 +71,4 @@ nav {
 		//   position: absolute;
 		  
 	}
-	/* i moved button to utils in scss folder so we can use it in other sections*/
 }

@@ -5,12 +5,14 @@ div#root > .services {
 	padding-top: 20rem;
 	text-align: center;
 	width: 100vw;
+	
 	@include breakpoint-up(medium) {
 		width: 98.6vw;
 	}
 	.content {
         width: 90%;
         margin: auto;
+
         @include breakpoint-down(medium) {
             width: 85%;
         }
