@@ -12,10 +12,11 @@
     width: min(85%, rem(700));
     position: absolute;
     left: calc((100% - min(85%, rem(700))) / 2);
-    margin-top: 50%;
+    top: 60%;
     box-shadow: 0 5px 10px 0px #8080805c;
     @include breakpoint-down(medium) {
-      translate: 0 20%;
+      // translate: 0 20%;
+      transform: translate(0 20%);
       margin-top: $spacing-xl;
     }
     .calculator {
