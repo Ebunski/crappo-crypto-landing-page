@@ -16,7 +16,7 @@
     box-shadow: 0 5px 10px 0px #8080805c;
     @include breakpoint-down(medium) {
       translate: 0 20%;
-      margin-top: $spacing-xl;
+      margin-top: 30%;
     }
     .calculator {
       display: flex;
