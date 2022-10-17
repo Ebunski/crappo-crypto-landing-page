@@ -4,7 +4,7 @@ import logo from "../assets/Logo.png";
 
 export default function Footer() {
   const textLinks = footerData.info.map((x, index) => (
-    <ul className="footer__links">
+    <ul key={index} className="footer__links">
       <h5 className="footer__links--title">{x.title}</h5>
       {x.links.map((item, id) => (
         <li key={id}>{item}</li>
