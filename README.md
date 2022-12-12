@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive comments section solution
+# Crypto Landing page
 
 This is a solution to the CodingOssy challenge for september
 
