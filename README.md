@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Crypto landing page](https://github.com/Ebunski/crappo-crypto-landing-page)
-- Live Site URL:[ Crypto landing page](https://crypto-landing-page-cat-oe.netlify.app/)
+- Solution URL: [https://github.com/Ebunski/crappo-crypto-landing-page](https://github.com/Ebunski/crappo-crypto-landing-page)
+- Live Site URL:[https://crypto-landing-page-cat-oe.netlify.app/](https://crypto-landing-page-cat-oe.netlify.app/)
 
 
 ### Built with
